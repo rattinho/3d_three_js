@@ -1,24 +1,17 @@
+// src/App.tsx
 import React from 'react';
-import logo from './logo.svg';
+import Scene from './components/Scene';
 import './App.css';
+import { Canvas } from '@react-three/fiber';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Canvas style={{ height: "100vh" }} className='bg-gradient-to-b from-sky-300 to-sky-600'>
+        <Scene />
+      </Canvas>
+      <div className='h-screen bg-slate-800'>
+      </div>
     </div>
   );
 }
